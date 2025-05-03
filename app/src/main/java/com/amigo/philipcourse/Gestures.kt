@@ -35,7 +35,7 @@ fun GestureExample() {
                 }
                 .pointerInput(Unit){
                     detectTapGestures(
-                        onTap = {gestureDetection.value="onTap"},
+                        onTap = {gestureDetection.value="onTap,x = ${it.x},y = ${it.y}"},
                         onPress = {gestureDetection.value="onPress"},
                         onDoubleTap = {gestureDetection.value="onDoubleTap"},
                         onLongPress = {gestureDetection.value="onLongPress"},
