@@ -1,4 +1,4 @@
-package com.amigo.phillipcourse
+package com.amigo.philipcourse
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

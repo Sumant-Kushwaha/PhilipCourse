@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.amigo.phillipcourse'
+    namespace 'com.amigo.philipcourse'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.amigo.phillipcourse"
+        applicationId "com.amigo.philipcourse"
         minSdk 24
         targetSdk 33
         versionCode 1

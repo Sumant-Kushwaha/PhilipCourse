@@ -1,4 +1,4 @@
-package com.amigo.phillipcourse.ui.theme
+package com.amigo.philipcourse.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

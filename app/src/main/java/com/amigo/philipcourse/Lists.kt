@@ -1,4 +1,4 @@
-package com.amigo.phillipcourse
+package com.amigo.philipcourse
 
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Column

@@ -1,4 +1,4 @@
-package com.amigo.phillipcourse
+package com.amigo.philipcourse
 
 import org.junit.Test
 
