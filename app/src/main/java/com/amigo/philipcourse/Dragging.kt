@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import kotlin.math.roundToInt
 
+
 @Composable
 fun DraggingExample() {
     var offsetX by remember {
@@ -23,22 +24,17 @@ fun DraggingExample() {
     var offsetY by remember {
         mutableStateOf(0f)
     }
-    Column(
-        horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier.fillMaxSize()
-    ) {
-        Box(
-            modifier = Modifier
-                .offset{ IntOffset(offsetX.roundToInt(),offsetY.roundToInt()) }
-                .size(100.dp)
-                .background(Color.Red)
-                .pointerInput(Unit) {
-                    detectDragGestures { change, dragAmount ->
-                        change.consumeAllChanges()
-                        offsetX+=dragAmount.x
-                        offsetY+=dragAmount.y
-                    }
+    Column(Modifier.fillMaxSize()) {
+        Box(modifier = Modifier
+            .offset { IntOffset(offsetX.roundToInt(),offsetY.roundToInt()) }
+            .size(100.dp)
+            .background(Color.Green)
+            .pointerInput(Unit) {
+                detectDragGestures { change, dragAmount ->
+                    offsetX += dragAmount.x
+                    offsetY += dragAmount.y
                 }
+            }
         )
     }
 }
