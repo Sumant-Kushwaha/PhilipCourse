@@ -10,11 +10,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 
-sealed class Destination(val route:String){
-    object Home:Destination("home")
-    object Profile:Destination("profile")
-    object Feed:Destination("feed")
-}
 
 @Composable
 fun HomeScreen(navController: NavHostController) {
@@ -33,6 +28,10 @@ fun HomeScreen(navController: NavHostController) {
 
         Button(onClick = { navController.navigate(Destination.Profile.route)}) {
             Text(text = "To Profile Screen")
+        }
+
+        Button(onClick = { navController.navigate(Destination.List.route)}) {
+            Text(text = "To List Screen")
         }
     }
 }
