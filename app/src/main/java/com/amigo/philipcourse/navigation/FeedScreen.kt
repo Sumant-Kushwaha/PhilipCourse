@@ -28,6 +28,7 @@ fun FeedScreen(navController: NavHostController) {
         Button(onClick = {
             navController.navigate(Destination.Profile.route) {
                 popUpTo(Destination.Home.route)
+//                launchSingleTop=true
             }
         }) {
             Text(text = "To Profile Screen")
