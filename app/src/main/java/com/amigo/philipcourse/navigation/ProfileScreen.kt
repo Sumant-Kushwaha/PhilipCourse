@@ -20,12 +20,20 @@ fun ProfileScreen(navController: NavHostController) {
     ) {
         Text(text = "Profile Screen")
 
-        Button(onClick = { navController.navigate("feed") }) {
+        Button(onClick = {
+            navController.navigate(Destination.Feed.route) {
+                popUpTo(Destination.Home.route)
+            }
+        }) {
             Text(text = "To Feed Screen")
         }
 
-        Button(onClick = { navController.navigate("home")}) {
+        Button(onClick = { navController.navigate(Destination.Home.route) }) {
             Text(text = "To Home Screen")
+        }
+
+        Button(onClick = { navController.popBackStack() }) {
+            Text(text = "To Previous Screen")
         }
     }
 }

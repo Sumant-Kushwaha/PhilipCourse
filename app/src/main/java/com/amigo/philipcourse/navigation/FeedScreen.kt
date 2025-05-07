@@ -21,11 +21,15 @@ fun FeedScreen(navController: NavHostController) {
     ) {
         Text(text = "Feed Screen")
 
-        Button(onClick = { navController.navigate("home") }) {
+        Button(onClick = { navController.navigate(Destination.Home.route) }) {
             Text(text = "To Home Screen")
         }
 
-        Button(onClick = { navController.navigate("profile")}) {
+        Button(onClick = {
+            navController.navigate(Destination.Profile.route) {
+                popUpTo(Destination.Home.route)
+            }
+        }) {
             Text(text = "To Profile Screen")
         }
     }

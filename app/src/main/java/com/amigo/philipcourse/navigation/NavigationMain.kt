@@ -15,8 +15,8 @@ fun MainNavigation(){
 @Composable
 fun NavigationAppHost(navController: NavHostController) {
     NavHost(navController = navController, startDestination = "home"){
-        composable("home") { HomeScreen(navController) }
-        composable("feed") { FeedScreen(navController) }
-        composable("profile") { ProfileScreen(navController) }
+        composable(Destination.Home.route) { HomeScreen(navController) }
+        composable(Destination.Feed.route) { FeedScreen(navController) }
+        composable(Destination.Profile.route) { ProfileScreen(navController) }
     }
 }
